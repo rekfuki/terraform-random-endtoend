@@ -28,11 +28,7 @@ resource "null_resource" "always_run" {
   }
 }
 
-resource "null_resource" "always_run_2" {
-  triggers = {
-    timestamp = "${timestamp()}"
-  }
-}
+
 
 resource "random_password" "password" {
   length           = var.length
